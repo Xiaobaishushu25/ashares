@@ -40,7 +40,7 @@ async fn test_get_price_sina() {
     let count = 10;
     let frequency = "1M";
 
-    let stock_data = get_price_sina(code, count, frequency,&[])
+    let stock_data = get_price_sina(code, count, frequency,&[5])
         .await
         .unwrap();
     for data in stock_data {
