@@ -1,0 +1,19 @@
+[package]
+name = "ashares"
+version = "0.1.0"
+edition = "2021"
+authors = ["Xbss <pjingfa@163.com>"]
+description = "中国股市A股股票行情实时数据最简封装API接口,包含日线,分时分钟线,以及均线数据,可用来研究，量化分析，证券股票程序化自动化交易系统。目前提供新浪腾讯接口，为量化研究者在数据获取方面极大地减轻工作量，更加专注于策略和模型的研究与实现。"
+readme = "README.md"
+# 定义 features
+[features]
+default = ["tokio"]  # 默认启用异步接口
+is_sync = ["reqwest/blocking","maybe-async/is_sync"]
+
+[dependencies]
+reqwest = { version = "0.12.12", features = ["default"]}  # 默认禁用异步，启用 json 支持
+serde_json = "1.0.137"
+chrono = "0.4.39"
+tokio = { version = "1.43.0", features = ["rt-multi-thread","macros"], optional = true }  # tokio 是异步依赖，可选
+maybe-async = { version = "0.2.10"}
+log = "0.4.25"
