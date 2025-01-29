@@ -1,6 +1,9 @@
 # ashares (开源 极简 A股实时行情数据API)
 
+
 中国股市A股股票行情实时数据最简封装API接口,包含日线,分时分钟线,以及均线数据,可用来研究，量化分析，证券股票程序化自动化交易系统。目前提供新浪腾讯接口，为量化研究者在数据获取方面极大地减轻工作量，更加专注于策略和模型的研究与实现。
+
+
 功能特点
 ---
 * 采用rust语言编写，性能好，运行稳定。
@@ -15,7 +18,7 @@
 
 * ashares 可以用在任何需要量化研究，量化分析的场合。
 
-### 先看一个最简单的例子 [ashares_test]()
+### 先看一个最简单的例子 [ashares_test](https://github.com/Xiaobaishushu25/ashares/blob/master/src/ashares_test.rs)
 
 ```rust
 async fn test_get_price_sina() {
